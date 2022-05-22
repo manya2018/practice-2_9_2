@@ -7,7 +7,7 @@ public:
     int row;
     int col;
     vector<vector<int> > mass;
-public:                 // TASK 2
+public:                 
     matrix( int row,int col)
     {
          this -> row=row;
@@ -18,7 +18,7 @@ public:                 // TASK 2
             mass.push_back(c) ;
         }
     }
-    matrix operator +( const matrix & other)
+    matrix operator +( const matrix & other)                              // TASK 4
     {
         matrix A(other.row,other.col);
         for (int i=0; i< other.row;i++)
@@ -32,7 +32,7 @@ public:                 // TASK 2
 
     }
 
-    void fill()
+    void fill()                                                         
     {
         int x;
         int j=0;
@@ -48,7 +48,7 @@ public:                 // TASK 2
 
         }
     };
-    void print()
+    void print()                                                    
     {
         for (int i = 0; i < row; i++)
         {
@@ -57,7 +57,7 @@ public:                 // TASK 2
             cout << endl;
         }
     }
-    void transposition()
+    void transposition()                                                // TASK 3
     {
         vector<vector<int>> A;
         vector<int> B;
@@ -82,7 +82,7 @@ public:                 // TASK 2
 
 
 };
-void summation(matrix A, matrix B)
+void summation(matrix A, matrix B)                                                  // TASK 2
 {
     vector<vector<int>> C(A.row,vector<int>(A.col));
 
